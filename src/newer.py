@@ -330,6 +330,12 @@ if 'user_id' not in st.session_state:
 # ✅ FIX: Define user_id after login check
 user_id = st.session_state.user_id
 
+# Initialize chat history for the bot 🌸
+if "chat_messages" not in st.session_state:
+    st.session_state.chat_messages = [
+        {"role": "assistant", "content": "Hey Cutie! 🌸 I'm Tessa, your AI bestie. How can I help you sparkle today? ✨"}
+    ]
+
 # MAIN TABS
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["🗓️ My Glow Plan 🌸", "📝 Dear Diary 🎀", "✨ My Sparkle Report 📊", "📖 My Pages", "🆘 Safe Space 🚨"])
 
@@ -525,8 +531,30 @@ st.markdown("*✨ Powered by Girl Math 💖*")
 # Floating Chatbot (Expands to chat)
 with st.popover("💬 Let's have a chat", use_container_width=False):
     st.markdown("### 🌸 Tessa Chechi")
-    chat_input = st.text_input("Spill the tea or ask advice...", key="floating_chat")
-    if chat_input:
-        with st.spinner("✨ Chechi is thinking..."):
-            phase = get_current_phase(user_id)
-            response = ai_chat(chat_input, user_id, phase)
+    
+    # Display chat messages from history on app rerun
+    for message in st.session_state.chat_messages:
+        with st.chat_message(message["role"]):
+            st.markdown(message["content"])
+
+    # React to user input
+    if prompt := st.chat_input("Spill the tea or ask advice..."):
+        # Display user message in chat message container
+        st.session_state.chat_messages.append({"role": "user", "content": prompt})
+        with st.chat_message("user"):
+            st.markdown(prompt)
+
+        # Display assistant response in chat message container
+        with st.chat_message("assistant"):
+            with st.spinner("✨ Tessa is thinking..."):
+                phase = get_current_phase(user_id)
+                response = ai_chat(prompt, user_id, phase)
+                st.markdown(response)
+        
+        # Add assistant response to chat history
+        st.session_state.chat_messages.append({"role": "assistant", "content": response})
+        st.rerun()
+
+    if st.button("🗑️ Clear Chat", type="secondary"):
+        st.session_state.chat_messages = [{"role": "assistant", "content": "Hey Cutie! 🌸 I'm Tessa, your AI bestie. How can I help you sparkle today? ✨"}]
+        st.rerun()
