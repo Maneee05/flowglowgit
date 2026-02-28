@@ -530,4 +530,8 @@ with st.popover("✨", use_container_width=False):
         with st.spinner("✨ Chechi is thinking..."):
             phase = get_current_phase(user_id)
             response = ai_chat(chat_input, user_id, phase)
+<<<<<<< HEAD
             st.markdown(response)
+=======
+            st.markdown(response)
+>>>>>>> 19e32db76e83ea5ef001cf0f5911135bb1cef367
