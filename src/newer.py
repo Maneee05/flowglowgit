@@ -523,7 +523,7 @@ st.markdown("---")
 st.markdown("*✨ Powered by Google Gemini AI & Girl Math 💖*")
 
 # Floating Chatbot (Expands to chat)
-with st.popover("🤖 Let's have a chat", use_container_width=False):
+with st.popover("💬 Let's have a chat", use_container_width=False):
     st.markdown("### 🌸 Tessa Chechi")
     chat_input = st.text_input("Spill the tea or ask advice...", key="floating_chat")
     if chat_input:
