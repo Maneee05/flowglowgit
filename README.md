@@ -51,12 +51,27 @@ Launch the application:
 
 streamlit run newer.py
 
+# Screenshots
+
+<img width="1917" height="637" alt="1" src="https://github.com/user-attachments/assets/c404a3db-2da0-47ce-8a19-893f94e38f63" />
+
+<img width="1915" height="795" alt="2" src="https://github.com/user-attachments/assets/f19e837e-2f0b-48f4-8d1d-514f0c957d4a" />
+
+<img width="1725" height="735" alt="Screenshot 2026-02-28 220942" src="https://github.com/user-attachments/assets/98313fe9-eade-4de7-9706-c7d5ceac15a4" />
+
+<img width="1596" height="778" alt="Screenshot 2026-02-28 215656" src="https://github.com/user-attachments/assets/70f60c65-d401-455b-8b38-862c834e5ab6" />
+
+<img width="1095" height="444" alt="Screenshot 2026-02-28 222727" src="https://github.com/user-attachments/assets/624c5f1e-3b19-4184-9bc0-2d8ccee882cc" />
+
+# Demo Video Link
+
+https://drive.google.com/file/d/113y7ZeKrXDdGjc1GumifpeieM_4yj-gp/view?usp=sharing
+
+
 # 🏗️ Architecture Diagram  
 
 
 <img width="404" height="397" alt="Screenshot 2026-02-28 184931" src="https://github.com/user-attachments/assets/51fac0a4-8622-4f23-a539-2c444e2b158a" />
-
-
 
 
 # 📜 API Documentation
