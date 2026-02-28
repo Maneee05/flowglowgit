@@ -520,7 +520,7 @@ with tab5:
             webbrowser.open("tel:100")
 
 st.markdown("---")
-st.markdown("*✨ Powered by Google Gemini AI & Girl Math 💖*")
+st.markdown("*✨ Powered by Girl Math 💖*")
 
 # Floating Chatbot (Expands to chat)
 with st.popover("💬 Let's have a chat", use_container_width=False):
