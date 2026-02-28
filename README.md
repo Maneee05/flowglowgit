@@ -1,7 +1,7 @@
-## 📖 Project Description
+📖 Project Description
 FlowGlow AI is more than just a calendar; it is an intelligent health companion that understands the nuances of the menstrual cycle. Using the Step 3.5 Flash model, the application analyzes user logs to provide phase-specific nutrition advice, activity plans, and mood tracking. It is specifically localized for the Indian context, offering suggestions for Kerala-based foods and local wellness practices.
 
-## 💻 Tech Stack
+💻 Tech Stack
 Frontend: Streamlit (Python)
 AI Engine: Step-3.5-Flash (via OpenRouter API)
 Database: SQLite3 (Local storage for secure, private diaries)
@@ -67,7 +67,7 @@ ai_day_plan: Returns a structured daily schedule based on the user's current pha
 
 ai_chat: Provides conversational support using an empathetic system prompt.
 
-## 👥 Team Members
+👥 Team Members
 Maneesha Manohar
 Parvathy G
 
